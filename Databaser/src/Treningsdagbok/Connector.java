@@ -4,22 +4,47 @@ import java.sql.*;
 
 public class Connector {
 
-	public static void main(String[] args) {
-		String db = "jdbc:mysql://localhost:3306/treningsdagbok?useSSL=false";
-		String driver = "com.mysql.jdbc.Driver";
-		String userName = "DB Admin";
-		String password = "secretpassword";
+	private Connection mcon;
+	private Statement state;
+	private String userName = "DB Admin";
+	private String db = "jdbc:mysql://localhost:3306/treningsdagbok?useSSL=false";
+	String driver = "com.mysql.jdbc.Driver";
+	String password = "secretpassword";
+
+	public Connector() {
 		try {
 			Class.forName(driver).newInstance();
-			Connection connection = DriverManager.getConnection(db,userName,password);
-			Statement state = connection.createStatement();
-			int value = state.executeUpdate("INSERT into treningsokt VALUES ('2016-03-15','10:00', 2, null, null, null, null)");
-			ResultSet result = state.executeQuery("SELECT * FROM treningsokt");
-			connection.close();
-			}
+			mcon = DriverManager.getConnection(db,userName,password);
+			Statement state = mcon.createStatement();
+		}
 
 		catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+
+
+	public String Read(String s) {
+		try {
+			ResultSet result = state.executeQuery(s);
+			int columns = result.getMetaData().getColumnCount();
+
+			StringBuilder message = new StringBuilder();
+
+			while (result.next()) {
+				for (int i = 1; i <= columns; i++) {
+					message.append(result.getString(i) + " ");
+				}
+				message.append("\n");
+			}
+
+			System.out.println(message);  // print table contents
+
+
+		}
+		catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return "";
 	}
 }
