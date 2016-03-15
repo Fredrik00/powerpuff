@@ -4,7 +4,6 @@ import java.sql.*;
 
 public class Connector {
 
-
 	private Connection mcon;
 	private Statement state;
 	private String userName = "DB Admin";
@@ -16,7 +15,7 @@ public class Connector {
 		try {
 			Class.forName(driver).newInstance();
 			mcon = DriverManager.getConnection(db,userName,password);
-			Statement state = mcon.createStatement();
+			state = mcon.createStatement();
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -27,6 +26,7 @@ public class Connector {
 	public void Read(String s) {
 		try {
 			ResultSet result = state.executeQuery(s);
+
 			int columns = result.getMetaData().getColumnCount();
 
 			StringBuilder message = new StringBuilder();
@@ -38,7 +38,7 @@ public class Connector {
 				message.append("\n");
 			}
 
-			System.out.println(message);  // print table contents
+			System.out.println(message);
 		}
 		catch (SQLException e) {
 			e.printStackTrace();

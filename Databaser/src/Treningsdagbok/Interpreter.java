@@ -5,6 +5,10 @@ public class Interpreter {
     Connector connector = new Connector();
 
     public void Check(String s) {
+    	if (s == "exit"){
+
+    	};
+
         query = s.split(";");
         if(query[0].equals("r")) {
             connector.Read(query[1]);
