@@ -24,7 +24,7 @@ public class Connector {
 	}
 
 
-	public String Read(String s) {
+	public void Read(String s) {
 		try {
 			ResultSet result = state.executeQuery(s);
 			int columns = result.getMetaData().getColumnCount();
@@ -43,7 +43,6 @@ public class Connector {
 		catch (SQLException e) {
 			e.printStackTrace();
 		}
-		return "";
 	}
 	public boolean Write(String s) {
 		try {
