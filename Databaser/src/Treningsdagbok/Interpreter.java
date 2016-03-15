@@ -9,11 +9,6 @@ public class Interpreter {
     Connector connector = new Connector();
 
     public void Check(String s) {
-    	if (s == "exit"){
-    		connector.exit();
-    	}
-
-    	else {
 	        query = s.split(";");
 	        if(query[0].equals("r")) {
 	            connector.Read(query[1]);
@@ -28,7 +23,6 @@ public class Interpreter {
 	        	System.out.println("ERROR ERROR");
 	        }
     	}
-    }
 
     public static void main (String[] args) {
         Interpreter interpreter = new Interpreter();
@@ -37,6 +31,7 @@ public class Interpreter {
 	        System.out.print("Write your (w/r) followed by a ';' and you SQL-statement: ");
 	        String reply = scanner.nextLine();
 	        if (reply == "exit"){
+	        	interpreter.connector.exit();
 	        	break;
 	        }
 	        interpreter.Check(reply);
