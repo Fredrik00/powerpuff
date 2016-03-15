@@ -9,8 +9,8 @@ public class Connector {
 	private Statement state;
 	private String userName = "DB Admin";
 	private String db = "jdbc:mysql://localhost:3306/treningsdagbok?useSSL=false";
-	String driver = "com.mysql.jdbc.Driver";
-	String password = "secretpassword";
+	private String driver = "com.mysql.jdbc.Driver";
+	private String password = "secretpassword";
 
 	public Connector() {
 		try {
@@ -44,5 +44,14 @@ public class Connector {
 			e.printStackTrace();
 		}
 		return "";
+	}
+	public boolean Write(String s) {
+		try {
+			return state.executeUpdate(s) == 1;
+		}
+		catch (SQLException e) {
+			e.printStackTrace();
+			return false;
+		}
 	}
 }
