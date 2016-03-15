@@ -6,15 +6,17 @@ public class Interpreter {
 
     public void Check(String s) {
     	if (s == "exit"){
+    		connector.exit();
+    	}
 
-    	};
-
-        query = s.split(";");
-        if(query[0].equals("r")) {
-            connector.Read(query[1]);
-        }
-        else if(query[0].equals("w")) {
-            connector.Write(query[1]);
-        }
+    	else {
+	        query = s.split(";");
+	        if(query[0].equals("r")) {
+	            connector.Read(query[1]);
+	        }
+	        else if(query[0].equals("w")) {
+	            connector.Write(query[1]);
+	        }
+    	}
     }
 }

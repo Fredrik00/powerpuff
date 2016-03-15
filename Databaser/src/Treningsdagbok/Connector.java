@@ -44,6 +44,7 @@ public class Connector {
 			e.printStackTrace();
 		}
 	}
+
 	public boolean Write(String s) {
 		try {
 			return state.executeUpdate(s) == 1;
@@ -51,6 +52,14 @@ public class Connector {
 		catch (SQLException e) {
 			e.printStackTrace();
 			return false;
+		}
+	}
+
+	public void exit(){
+		try {
+			mcon.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
 		}
 	}
 }
