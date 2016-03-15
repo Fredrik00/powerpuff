@@ -19,7 +19,13 @@ public class Interpreter {
 	            connector.Read(query[1]);
 	        }
 	        else if(query[0].equals("w")) {
-	            connector.Write(query[1]);
+	            if (connector.Write(query[1])){
+	            	System.out.println("Query executed successfully");
+	            }
+	        }
+
+	        else{
+	        	System.out.println("ERROR ERROR");
 	        }
     	}
     }
@@ -27,8 +33,13 @@ public class Interpreter {
     public static void main (String[] args) {
         Interpreter interpreter = new Interpreter();
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Write your (w/r) followed by a ';' and you SQL-statement");
-        String reply = scanner.nextLine();
-        interpreter.Check(reply);
+        while (true){
+	        System.out.print("Write your (w/r) followed by a ';' and you SQL-statement: ");
+	        String reply = scanner.nextLine();
+	        if (reply == "exit"){
+	        	break;
+	        }
+	        interpreter.Check(reply);
+        }
     }
 }
