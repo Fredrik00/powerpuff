@@ -3,10 +3,6 @@ package Treningsdagbok;
 import java.sql.*;
 
 public class Connector {
-
-	public String read(String query){
-	}
-
 	public static void main(String[] args) {
 		String db = "jdbc:mysql://localhost:3306/treningsdagbok?useSSL=false";
 		String driver = "com.mysql.jdbc.Driver";
