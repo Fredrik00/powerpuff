@@ -4,6 +4,7 @@ import java.sql.*;
 
 public class Connector {
 
+
 	private Connection mcon;
 	private Statement state;
 	private String userName = "DB Admin";
@@ -17,7 +18,6 @@ public class Connector {
 			mcon = DriverManager.getConnection(db,userName,password);
 			Statement state = mcon.createStatement();
 		}
-
 		catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -39,8 +39,6 @@ public class Connector {
 			}
 
 			System.out.println(message);  // print table contents
-
-
 		}
 		catch (SQLException e) {
 			e.printStackTrace();
