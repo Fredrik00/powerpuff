@@ -19,6 +19,11 @@ public class Interpreter {
 	            }
 	        }
 
+	        else if(query[0].equals("c")) {
+	        	String[] values = query[1].split(" ");
+	        	System.out.println(connector.compare(Integer.parseInt(values[1]), Integer.parseInt(values[2])));
+	        }
+
 	        else{
 	        	System.out.println("ERROR ERROR");
 	        }
@@ -36,5 +41,6 @@ public class Interpreter {
 	        }
 	        interpreter.Check(reply);
         }
+        scanner.close();
     }
 }
