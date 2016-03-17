@@ -6,16 +6,25 @@ public class Connector {
 
 	private Connection mcon;
 	private Statement state;
-	private String userName = "DB Admin";
-	private String db = "jdbc:mysql://localhost:3306/treningsdagbok?useSSL=false";
-	private String driver = "com.mysql.jdbc.Driver";
+
+    private String driver = "com.mysql.jdbc.Driver";
+
+	private String db_fmt = "jdbc:mysql://%s:%s/treningsdagbok?useSSL=false";
+
+    private String host = "localhost";
+    private String port = "3306";
+
+    private String userName = "DB Admin";
 	private String password = "secretpassword";
+
+    public boolean initialized_correctly = false;
 
 	public Connector() {
 		try {
 			Class.forName(driver).newInstance();
-			mcon = DriverManager.getConnection(db,userName,password);
+			mcon = DriverManager.getConnection(String.format(db_fmt,host,port),userName,password);
 			state = mcon.createStatement();
+            initialized_correctly = true;
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -93,23 +102,23 @@ public class Connector {
 			}
 
 			if (maal == 0){
-				maaltekst = ". Ikke noe mål for perioden.";
+				maaltekst = ". Ikke noe mÃ¥l for perioden.";
 			}
 
 			else if (maal < resultat){
-				maaltekst = ". Mål ikke oppnådd, med en differanse på " + (resultat - maal) + ".";
+				maaltekst = ". MÃ¥l ikke oppnÃ¥dd, med en differanse pÃ¥ " + (resultat - maal) + ".";
 			}
 
 			else if (maal > resultat){
-				maaltekst = ". Mål oppnåd, med en differanse på " + (resultat - maal) + ".";
+				maaltekst = ". MÃ¥l oppnÃ¥d, med en differanse pÃ¥ " + (resultat - maal) + ".";
 			}
 
 			if (lowest < resultat){
-				return "Resultat dårligere enn beste i perioden, med en differanse på " + (resultat - lowest) + maaltekst;
+				return "Resultat dÃ¥rligere enn beste i perioden, med en differanse pÃ¥ " + (resultat - lowest) + maaltekst;
 			}
 
 			else if (lowest > resultat){
-				return "Resultat bedre enn beste i perioden, med en differanse på " + (resultat - lowest) + maaltekst;
+				return "Resultat bedre enn beste i perioden, med en differanse pÃ¥ " + (resultat - lowest) + maaltekst;
 			}
 
 			else if (lowest == resultat){
