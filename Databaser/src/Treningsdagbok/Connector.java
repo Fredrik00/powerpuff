@@ -50,8 +50,8 @@ public class Connector {
 			System.out.println(message);
 		}
 		catch (SQLException e) {
-			e.printStackTrace();
-		}
+            System.out.println(e.getMessage());
+        }
 	}
 
 	public boolean Write(String s) {
@@ -59,8 +59,8 @@ public class Connector {
 			return state.executeUpdate(s) == 1;
 		}
 		catch (SQLException e) {
-			e.printStackTrace();
-			return false;
+            System.out.println(e.getMessage());
+            return false;
 		}
 	}
 
