@@ -75,13 +75,13 @@ public class Connector {
 	public String compare(int ID, int days){
 		try {
 			Statement tempstate = mcon.createStatement();
-			ResultSet specific = tempstate.executeQuery("select Resultat, Ovelse_Navn from treningsokt join resultater where treningsokt.ID = resultater.Okt_ID and resultater.ID = " + ID);
+			ResultSet specific = tempstate.executeQuery("select Resultat, Ovelse_Navn from Treningsokt join Resultater where Treningsokt.ID = Resultater.Okt_ID and Resultater.ID = " + ID);
 			specific.next();
 			int resultat = specific.getInt(1);
 			String navn = specific.getString(2);
 			tempstate.close();
 
-			ResultSet periode = state.executeQuery("select dato, Resultat, Maal, Ovelse_Navn from treningsokt join resultater where treningsokt.ID = resultater.Okt_ID and Ovelse_Navn = '" + navn + "' and dato > NOW() - INTERVAL " + days + " DAY");
+			ResultSet periode = state.executeQuery("select dato, Resultat, Maal, Ovelse_Navn from Treningsokt join Resultater where Treningsokt.ID = Resultater.Okt_ID and Ovelse_Navn = '" + navn + "' and dato > NOW() - INTERVAL " + days + " DAY");
 			int lowest = 0;
 			int maal = 0;
 
