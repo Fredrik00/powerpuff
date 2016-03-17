@@ -102,23 +102,23 @@ public class Connector {
 			}
 
 			if (maal == 0){
-				maaltekst = ". Ikke noe mÃ¥l for perioden.";
+				maaltekst = ". Ikke noe mål for perioden.";
 			}
 
 			else if (maal < resultat){
-				maaltekst = ". MÃ¥l ikke oppnÃ¥dd, med en differanse pÃ¥ " + (resultat - maal) + ".";
+				maaltekst = ". Mål ikke oppnådd, med en differanse på " + (resultat - maal) + ".";
 			}
 
 			else if (maal > resultat){
-				maaltekst = ". MÃ¥l oppnÃ¥d, med en differanse pÃ¥ " + (resultat - maal) + ".";
+				maaltekst = ". Mål oppnådd, med en differanse på " + (resultat - maal) + ".";
 			}
 
 			if (lowest < resultat){
-				return "Resultat dÃ¥rligere enn beste i perioden, med en differanse pÃ¥ " + (resultat - lowest) + maaltekst;
+				return "Resultat dårligere enn beste i perioden, med en differanse på " + (resultat - lowest) + maaltekst;
 			}
 
 			else if (lowest > resultat){
-				return "Resultat bedre enn beste i perioden, med en differanse pÃ¥ " + (resultat - lowest) + maaltekst;
+				return "Resultat bedre enn beste i perioden, med en differanse på " + (resultat - lowest) + maaltekst;
 			}
 
 			else if (lowest == resultat){
