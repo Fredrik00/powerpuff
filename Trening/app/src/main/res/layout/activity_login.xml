@@ -11,6 +11,7 @@
     tools:context="com.example.primer.trening.LoginActivity">
 
     <!-- Login progress -->
+
     <ProgressBar
         android:id="@+id/login_progress"
         style="?android:attr/progressBarStyleLarge"
@@ -54,19 +55,21 @@
         </RelativeLayout>
     </ScrollView>
 
-    <Button
+    <ImageButton
         android:id="@+id/sign_in_button"
         style="?android:textAppearanceSmall"
-        android:layout_width="300dp"
-        android:layout_height="60dp"
+        android:layout_width="350dp"
+        android:layout_height="100dp"
         android:text="SIGN IN"
         android:textStyle="bold"
-        android:background="@android:color/holo_green_light"
         android:textColor="@android:color/white"
         android:clickable="true"
         android:textSize="24dp"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/login_button"
+        android:scaleType="fitCenter"
+        android:background="#00ffffff" />
 
     <EditText
         android:id="@+id/password"
@@ -83,4 +86,5 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_marginBottom="60dp" />
+
 </RelativeLayout>
