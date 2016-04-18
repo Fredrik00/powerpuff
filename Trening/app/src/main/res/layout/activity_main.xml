@@ -144,11 +144,11 @@
                     android:text="Large Text"
                     android:id="@+id/textView" />
 
-                <ImageView
+                <!-- <ImageView
                     android:src="@drawable/mapses"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/imageView" />
+                    android:id="@+id/imageView" /> -->
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -162,6 +162,11 @@
                     android:layout_height="wrap_content"
                     android:text="New Button"
                     android:id="@+id/button5" />
+
+                <ListView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/listView" />
 
             </LinearLayout>
 
