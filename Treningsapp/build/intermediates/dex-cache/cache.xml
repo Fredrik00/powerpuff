@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/home/primer/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.2.0/support-annotations-23.2.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="c5bf571bb10462bd90e5419ade67793f71acbc87">
+        <dex dex="/home/primer/powerpuff/Treningsapp/app/build/intermediates/pre-dexed/debug/support-annotations-23.2.0_ded5ec5a59f72988b4a2a8c30be6f5a40a6c4ebe.jar" />
+    </item>
+    <item
+        jar="/home/primer/powerpuff/Treningsapp/app/build/intermediates/exploded-aar/com.android.support/design/23.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="1aa5b025efe97f5006f5be16d6ca67c6c3c0c0d8">
+        <dex dex="/home/primer/powerpuff/Treningsapp/app/build/intermediates/pre-dexed/debug/com.android.support-design-23.2.0_50625eb42bd6eb83f7d49ab47ea627e0d1b7564e.jar" />
+    </item>
+    <item
+        jar="/home/primer/powerpuff/Treningsapp/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8c108c22c99e794eff255bb34d2a461200c4cbb0">
+        <dex dex="/home/primer/powerpuff/Treningsapp/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.2.0_3d5a8ccaa80373076bdbd625ecec4d1bb592ef70.jar" />
+    </item>
+    <item
+        jar="/home/primer/powerpuff/Treningsapp/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/jars/libs/internal_impl-23.2.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6e239441500605809818997dd63b62a947195f8c">
+        <dex dex="/home/primer/powerpuff/Treningsapp/app/build/intermediates/pre-dexed/debug/internal_impl-23.2.0_314c451fe8485b987799597d521626593a5d0814.jar" />
+    </item>
+    <item
+        jar="/home/primer/powerpuff/Treningsapp/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="e5f32fa48a3eb2de0c987025c11b6e3864b634d9">
+        <dex dex="/home/primer/powerpuff/Treningsapp/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.2.0_31e09482c6d86ceaa3deee2abab318c66845efc7.jar" />
+    </item>
+    <item
+        jar="/home/primer/powerpuff/Treningsapp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6e3578f92f7462d1a935a1d36173e3bdd1234976">
+        <dex dex="/home/primer/powerpuff/Treningsapp/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.2.0_a33949508f489e88fb319586efef5290dbb9ffdd.jar" />
+    </item>
+    <item
+        jar="/home/primer/powerpuff/Treningsapp/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="d4c936aa8c7d2522c82e3f1829c791d9e367f009">
+        <dex dex="/home/primer/powerpuff/Treningsapp/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.2.0_34eb8f3990ace7a3f8c849bca7bdc58f3e1b904d.jar" />
+    </item>
+    <item
+        jar="/home/primer/powerpuff/Treningsapp/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="292a9fa091757208efa65e77eef63088247e51f3">
+        <dex dex="/home/primer/powerpuff/Treningsapp/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.2.0_eba6ceec5877fb5aed8c73367f938e9a6948c270.jar" />
+    </item>
+
+</items>
